@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText nome;
     private EditText email;
     private EditText idade;
+    private EditText cadastro;
     private AlunoDAO dao;
 
     @Override
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         nome = findViewById(R.id.editTextNome);
         email = findViewById(R.id.editTextEmail);
         idade = findViewById(R.id.editTextIdade);
+        cadastro = findViewById(R.id.editTextCadastro);
         dao = new AlunoDAO(this);
     }
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         aluno.setNome(nome.getText().toString());
         aluno.setEmail(email.getText().toString());
         aluno.setIdade(idade.getText().toString());
+        aluno.setCadastro(cadastro.getText().toString());
 
         long id = dao.Inserir(aluno);
         Toast.makeText(this, "Aluno inserido com sucesso, com o id: " +id, Toast.LENGTH_SHORT).show();

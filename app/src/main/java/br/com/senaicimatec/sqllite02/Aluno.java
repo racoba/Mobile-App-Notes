@@ -1,12 +1,14 @@
 package br.com.senaicimatec.sqllite02;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Aluno implements Serializable {
-    private  Integer id;
-    private  String nome;
-    private  String email;
-    private  String idade;
+    private Integer id;
+    private String nome;
+    private String email;
+    private String idade;
+    private Date cadastro;
 
     public Integer getId() {
         return id;
@@ -40,5 +42,10 @@ public class Aluno implements Serializable {
         this.idade = idade;
     }
 
+    public Date getCadastro() {
+        return cadastro;
+    }
+
+    public void setCadastro(String cadastro) { this.cadastro = new Date(cadastro); }
 
 }

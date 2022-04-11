@@ -18,6 +18,7 @@ public class AlunoDAO {
         values.put("nome", aluno.getNome());
         values.put("email", aluno.getEmail());
         values.put("idade", aluno.getIdade());
+        values.put("cadastro", aluno.getCadastro().toString());
         return db.insert("aluno", null, values);
     }
 }
